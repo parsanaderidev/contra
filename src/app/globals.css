@@ -1,0 +1,7 @@
+/* Framer CSS extracted from contra.html (converted to a Next.js + Bun app).
+   Order matters: fonts -> breakpoint helpers -> component styles -> body base. */
+
+@import './styles/fonts.css';
+@import './styles/breakpoints.css';
+@import './styles/framer-components.css';
+@import './styles/body-base.css';
