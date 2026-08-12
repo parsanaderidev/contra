@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Contra Labs
+
+A pixel-faithful port of the [Contra Labs](https://contralabs.com) Framer
+landing page ("The world's leading independent human data & creative
+evaluation lab") rebuilt in **Next.js (App Router) + Bun + TypeScript**, with
+the original Framer SSR markup served from `src/app/blob/main-inner.ts` and
+hydrated headlessly.
+
+**Live**: https://contra-ebon.vercel.app
+
+## Stack
+
+- Next.js 16.3.0 (App Router, Turbopack), React 19
+- Bun 1.3.9 — `bun dev`, `bun run build`, `bun run lint`
+- TypeScript, plain CSS (no Tailwind)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+bun install
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Checks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+bun run lint   # no errors (a few pre-existing unused-import warnings OK)
+bun run build  # static pages for / and /blob
+```
 
-## Learn More
+## Deploy
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+vercel --prod --name contra --yes
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Production alias: `contra-ebon.vercel.app`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Layout
 
-## Deploy on Vercel
+- `src/app/page.tsx` — renders the Framer SSR blob + runtime + credit footer
+- `src/app/blob/main-inner.ts` — the Framer-generated HTML string (the actual
+  page)
+- `src/components/FramerRuntime.tsx` — Framer motion/animations runtime
+- `src/components/CreditFooter.tsx` — "Made by ParsaNaderi" footer
+- `src/app/styles/` — CSS extracted from `contra.html`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`contra.html` is the reference source for frame timing and styling.
