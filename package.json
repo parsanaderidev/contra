@@ -2,6 +2,9 @@
   "name": "contra-labs",
   "version": "1.0.0",
   "private": true,
+  "description": "Pixel-faithful Next.js + Bun port of the Contra Labs Framer landing page — built by ParsaNaderi",
+  "author": "ParsaNaderi (https://parsanaderi-dev.vercel.app)",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
