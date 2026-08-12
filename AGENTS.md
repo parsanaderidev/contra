@@ -27,7 +27,7 @@ that appear, and keep the project deployable (GitHub → Vercel).
   `<script data-nextjs-dev-overlay>` into `<body>` before React hydrates,
   breaking hydration for the SSR'd `#main`/`SvgTemplates` tree. Disabled it
   with `devIndicators: false` in `next.config.ts`.
-- **Live**: https://contra-ebon.vercel.app — repo: https://github.com/parsanaderidev/contra
+- **Live**: https://contralab.vercel.app — repo: https://github.com/parsanaderidev/contra
 - `bun run build` and `bun run lint` pass (lint has ~18 pre-existing
   `CSSProperties` unused-import warnings in `src/components/sections/*` — not
   errors, don't chase them unless asked).
@@ -71,6 +71,6 @@ components_backup/        # pre-fix snapshots of Footer/FramerRuntime
 1. `bun run lint` — no errors (warnings OK).
 2. `bun run build` — must compile + generate static pages.
 3. Deploy: `vercel --prod --name contra --yes` (Vercel CLI logged in as
-   `parsanaderidev`). Production alias: `contra-ebon.vercel.app`.
+   `parsanaderidev`). Production alias: `contralab.vercel.app`.
 4. Update this file whenever you solve something or add behavior so the next
    agent can onboard fast.

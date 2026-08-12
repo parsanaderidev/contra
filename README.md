@@ -7,7 +7,7 @@ A pixel-faithful port of the **Contra Labs** Framer landing page
 Router stack. It serves the original Framer SSR markup headlessly and hydrates
 it with Framer's runtime, preserving the site's look, motion, and frame timing.
 
-**Live**: https://contra-ebon.vercel.app · **Made by**
+**Live**: https://contralab.vercel.app · **Made by**
 [ParsaNaderi](https://parsanaderi-dev.vercel.app)
 
 ## Features
@@ -80,7 +80,7 @@ The app is deployed to Vercel from the `main` branch:
 vercel --prod --name contra --yes
 ```
 
-Production alias: **https://contra-ebon.vercel.app**
+Production alias: **https://contralab.vercel.app**
 
 ## License
 
