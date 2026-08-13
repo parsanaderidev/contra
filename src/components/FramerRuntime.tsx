@@ -51,7 +51,7 @@ export default function FramerRuntime() {
       type={"module"}
       async
       data-framer-bundle={"main"}
-      fetchPriority={"high"}
+      fetchPriority={"low"}
     />
     <script
       type={"framer/handover"}

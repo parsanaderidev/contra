@@ -27,6 +27,7 @@ export default function Home() {
         data-framer-ssr-released-at={"2026-08-06T12:57:44.116Z"}
         data-framer-page-optimized-at={"2026-08-07T18:34:06.613Z"}
         data-framer-generated-page={""}
+        suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: mainInnerHTML }}
       />
       <SvgTemplates />

@@ -41,12 +41,6 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" data-redirect-timezone="1">
-      <head>
-        <link
-          rel="modulepreload"
-          href="https://framerusercontent.com/sites/4mczKcLotdb6v4fL61MTSr/script_main.SzDTqICU.mjs"
-        />
-      </head>
       <body>{children}</body>
     </html>
   );
